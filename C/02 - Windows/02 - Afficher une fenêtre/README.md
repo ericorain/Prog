@@ -91,7 +91,7 @@ d:\Prog\C\02 - Windows\02 - Afficher une fenêtre>gcc -mwindows -o fenetre.exe f
 d:\Prog\C\02 - Windows\02 - Afficher une fenêtre>
 ```
 
-Note : le paramètre "-mwindows" permet de supprimer une fenêtre de console intempestive qui reste affichée à l'écran tant que la popup est affichée.
+Note : le paramètre "-mwindows" permet de supprimer une fenêtre de console intempestive qui reste affichée à l'écran tant que la fenêtre est affichée.
 
 # 4 - Exécution
 
