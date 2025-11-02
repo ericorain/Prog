@@ -26,8 +26,6 @@ d:\data\git\programming\c\01 - Afficher un texte>gcc -o affiche_texte.exe affich
 d:\data\git\programming\c\01 - Afficher un texte>
 ```
 
-Note : le paramètre "-mwindows" permet de supprimer une fenêtre de console intempestive qui reste affichée à l'écran tant que la popup est affichée.
-
 # 4 - Exécution
 
 Affiche un texte.

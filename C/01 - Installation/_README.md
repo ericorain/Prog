@@ -19,12 +19,11 @@ Il faut récupérer l'archive ayant un nom contenant "x86_64" et "release-posix-
 x86_64-15.2.0-release-posix-seh-ucrt-rt_v13-rev0.7z
 ```
 
-
 ## 2 - Décompression de l'archive à la racine du disque dur
 
 Il n'y a pas d'installation à réaliser, juste ouvrir l'archive avec 7zip (https://www.7-zip.org/). En ouvrant l'archive 7zip, on trouve le répertoire "mingw64" ; il suffit de copier ce dernier en le décompressant à la racine du lecteur C.
 
-## 3 - Rajouter le chemin de GCC dans le PATH
+## 3 - Ajout du chemin de GCC dans le PATH
 
 1. Appuyez sur les touches Windows+Pause puis "Paramètres avancés du système" (ou Windows+R puis vous lancez "sysdm.cpl" puis sélectionnez l"onglet "Paramètres système avancés").
 2. Cliquez sur le bouton "Variables d'environnement".
@@ -36,7 +35,8 @@ c:\mingw64\bin\
 ```
 
 5. Validez votre choix.
-## 4 - Testez GCC
+
+## 4 - Test de GCC
 
 Tapez "gcc -v" dans une invite de commande. Vous devriez avoir ceci :
 
