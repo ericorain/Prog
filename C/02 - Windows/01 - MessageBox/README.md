@@ -45,7 +45,7 @@ Note : le paramètre "-mwindows" permet de supprimer une fenêtre de console int
 
 # 4 - Exécution
 
-Une popup.
+Une popup est affichée avec un bouton "OK".
 
 ``` powershell
 d:\data\git\programming\c\01 - Messagebox>messagebox.exe
