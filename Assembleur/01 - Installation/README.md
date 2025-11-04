@@ -104,3 +104,25 @@ gcc version 15.2.0 (x86_64-posix-seh-rev0, Built by MinGW-Builds project)
 PS D:\>
 ```
 
+# Installation de windres
+
+ windres qui sert à la génération de fichier .res depuis des fichiers .rc se trouve installé avec GCC. Donc il n'y a pas d'installation à réaliser.
+
+# Installation de ResourceHacker
+
+ResourceHacker est un éditeur de ressources (fichiers .rc). Le logiciel peut s'utiliser sans installation.
+
+Le logiciel ResourceHacker permet de créer des fichiers .rc (au format texte) ainsi que des fichiers .res (compilés).
+
+A noter que :
+- Par défaut, Resourcehacker sauve un fichier .rc en UTF16
+	- Il faut recopier le texte généré dans un fichier texte en ANSI pour que windres puisse créer un fichier .res
+
+- Pour que windres lise le fichier généré, il faut rajouter au début du fichier .rc :
+
+```
+#include <WINUSER.H>
+```
+
+- Lien :
+https://www.angusj.com/resourcehacker/#download

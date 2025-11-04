@@ -43,13 +43,13 @@ call  ExitProcess
 
 ```
 nasm -f win64 messagebox.asm
-gcc -mwindows -o messagebox.exe messagebox.obj
+gcc -mwindows -nostartfiles -o messagebox.exe messagebox.obj
 ```
 
 ``` powershell
 d:\Prog\Assembleur\02 - Windows\01 - MessageBox>nasm -f win64 messagebox.asm
 
-d:\Prog\Assembleur\02 - Windows\01 - MessageBox>gcc -mwindows -o messagebox.exe messagebox.obj
+d:\Prog\Assembleur\02 - Windows\01 - MessageBox>gcc -mwindows -nostartfiles -o messagebox.exe messagebox.obj
 
 d:\Prog\Assembleur\02 - Windows\01 - MessageBox>dir messagebox.*
  Le volume dans le lecteur D n’a pas de nom.
@@ -58,16 +58,17 @@ d:\Prog\Assembleur\02 - Windows\01 - MessageBox>dir messagebox.*
  Répertoire de d:\Prog\Assembleur\02 - Windows\01 - MessageBox
 
 02/11/2025  22:07             1 196 messagebox.asm
-02/11/2025  22:07            55 190 messagebox.exe
-02/11/2025  22:07               503 messagebox.obj
-               3 fichier(s)           56 889 octets
-               0 Rép(s)  3 062 191 120 384 octets libres
+03/11/2025  11:16             6 603 messagebox.exe
+03/11/2025  11:16               503 messagebox.obj
+               3 fichier(s)            8 302 octets
+               0 Rép(s)  3 062 190 415 872 octets libres
 
 d:\Prog\Assembleur\02 - Windows\01 - MessageBox>
 ```
 
 Note : le paramètre "-mwindows" permet de supprimer une fenêtre de console intempestive qui reste affichée à l'écran tant que la popup est affichée.
 
+Note 2 : avec le paramètre "-nostartfiles", le linkeur ne se sert pas des fichiers de démarrage système standard lors de l'édition de liens. Les bibliothèques système standard sont utilisées normalement, sauf si les options -nostdlib, -nolibc ou -nodefaultlibs sont utilisées. Ici, on gagne presque 50 Ko et le programme devient plus petit.
 # 4 - Exécution
 
 Une popup est affichée avec un bouton "OK".

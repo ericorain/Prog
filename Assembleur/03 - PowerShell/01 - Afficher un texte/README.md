@@ -33,36 +33,38 @@ section .text
 
 ```
 nasm -f win64 affiche_texte.asm
-gcc -o affiche_texte.exe affiche_texte.obj
+gcc -nostartfiles -o affiche_texte.exe affiche_texte.obj
 ```
 
 ``` powershell
-D:\data\git\programming\asm\nasm\MessageBox>nasm -f win64 affiche_texte.asm
+d:\Prog\Assembleur\03 - PowerShell\01 - Afficher un texte>nasm -f win64 affiche_texte.asm
 
-D:\data\git\programming\asm\nasm\MessageBox>gcc -o affiche_texte.exe affiche_texte.obj
+d:\Prog\Assembleur\03 - PowerShell\01 - Afficher un texte>gcc -nostartfiles -o affiche_texte.exe affiche_texte.obj
 
-D:\data\git\programming\asm\nasm\MessageBox>dir affiche_texte.*
+d:\Prog\Assembleur\03 - PowerShell\01 - Afficher un texte>dir affiche_texte.*
  Le volume dans le lecteur D n’a pas de nom.
  Le numéro de série du volume est 0C0C-BE1F
 
- Répertoire de D:\data\git\programming\asm\nasm\MessageBox
+ Répertoire de d:\Prog\Assembleur\03 - PowerShell\01 - Afficher un texte
 
 02/11/2025  21:10               314 affiche_texte.asm
-02/11/2025  21:17            53 045 affiche_texte.exe
-02/11/2025  21:17               378 affiche_texte.obj
-               3 fichier(s)           53 737 octets
-               0 Rép(s)  3 062 192 238 592 octets libres
+03/11/2025  11:20             8 336 affiche_texte.exe
+03/11/2025  11:20               378 affiche_texte.obj
+               3 fichier(s)            9 028 octets
+               0 Rép(s)  3 062 190 456 832 octets libres
 
-D:\data\git\programming\asm\nasm\MessageBox>
+d:\Prog\Assembleur\03 - PowerShell\01 - Afficher un texte>
 ```
+
+Note : avec le paramètre "-nostartfiles", le linkeur ne se sert pas des fichiers de démarrage système standard lors de l'édition de liens. Les bibliothèques système standard sont utilisées normalement, sauf si les options -nostdlib, -nolibc ou -nodefaultlibs sont utilisées. Ici, on gagne presque 50 Ko et le programme devient plus petit.
 
 # 4 - Exécution
 
 Affiche un texte.
 
 ``` powershell
-D:\data\git\programming\asm\nasm\MessageBox>affiche_texte.exe
+d:\Prog\Assembleur\03 - PowerShell\01 - Afficher un texte>affiche_texte.exe
 Bonjour
 
-D:\data\git\programming\asm\nasm\MessageBox>
+d:\Prog\Assembleur\03 - PowerShell\01 - Afficher un texte>
 ```
